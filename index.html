@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kaminari Sushi — Projeto conceitual de portfólio</title>
+<meta name="description" content="Projeto conceitual de site para um rodízio japonês fictício, desenvolvido por Johnatan Flores. HTML e CSS puros, responsivo e acessível.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#080807">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kaminari Sushi — Projeto conceitual">
+<meta property="og:description" content="Site conceitual para um rodízio japonês fictício. Projeto de portfólio de Johnatan Flores.">
+<meta property="og:image" content="assets/img/hero.jpg">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23E2B53A'/%3E%3Cpath d='M36 8 18 36h12l-4 20 20-30H34z' fill='%23080807'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Kaushan+Script&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#080807}
+a{color:#E2B53A}a:hover{color:#F0CB66}
+.k2-wave{background-color:#0E0D0B;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cg fill='none' stroke='%23E2B53A' stroke-opacity='0.09' stroke-width='1.5'%3E%3Cpath d='M0 40a40 40 0 0 1 80 0M10 40a30 30 0 0 1 60 0M20 40a20 20 0 0 1 40 0M30 40a10 10 0 0 1 20 0'/%3E%3Cpath d='M-40 20a40 40 0 0 1 80 0M-30 20a30 30 0 0 1 60 0M-20 20a20 20 0 0 1 40 0M40 20a40 40 0 0 1 80 0M50 20a30 30 0 0 1 60 0M60 20a20 20 0 0 1 40 0'/%3E%3C/g%3E%3C/svg%3E");background-size:80px 40px}
+@keyframes k2-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.k2-track{display:flex;width:max-content;animation:k2-marquee 38s linear infinite}
+@media (prefers-reduced-motion: reduce){.k2-track{animation:none}}
+.k2-bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:240px;gap:14px}
+@media (max-width:760px){.k2-bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px}.k2-bento>*{grid-column:auto !important;grid-row:auto !important}.k2-vert{display:none !important}}
+.k2-tile img{transition:transform .5s ease}.k2-tile:hover img{transform:scale(1.05)}
+section[id]{scroll-margin-top:96px}
+@media (max-width:760px){nav[aria-label="Principal"] a:not(:last-child){display:none}section[id]{scroll-margin-top:84px}}
+a:focus-visible,button:focus-visible{outline:3px solid #E2B53A;outline-offset:3px}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&amp;display=swap&amp;text=%E3%81%84%E3%81%86%E3%81%8A%E3%81%8D%E3%81%92%E3%81%94%E3%81%95%E3%81%97%E3%81%9B%E3%81%9D%E3%81%9F%E3%81%A1%E3%81%A3%E3%81%A7%E3%81%B7%E3%81%B9%E3%81%BE%E3%82%83%E3%82%89%E3%82%8A%E4%B8%80%E4%B8%89%E4%B8%BC%E4%BA%8C%E4%BA%94%E5%85%AD%E5%85%B8%E5%86%85%E5%87%BA%E5%88%BA%E5%89%8D%E5%8F%B8%E5%93%81%E5%96%B6%E5%9B%9B%E5%A4%A9%E5%AF%BF%E5%B7%BB%E6%89%8B%E6%8F%9A%E6%8F%A1%E6%94%BE%E6%96%99%E6%9B%B8%E6%9D%BF%E6%A1%88%E6%A5%AD%E7%89%A9%E7%89%B9%E7%A9%BA%E8%8F%9C%E8%A3%8F%E8%BA%AB%E9%87%91%E9%89%84%E9%96%93%E9%9B%B7%E9%A1%8C%E9%A3%9F" rel="stylesheet">
+</head>
+<body>
+<div style="background: #080807; color: #F5F1E8; font-family: 'Montserrat', system-ui, sans-serif; font-size: 17px; line-height: 1.6; min-height: 100vh; overflow-x: clip">
+
+<div role="note" style="background: #1A1813; color: #CFC8BC; font-size: 13px; text-align: center; padding: 8px 24px; border-bottom: 1px solid #2C2920">Projeto conceitual de portfólio. Kaminari Sushi é uma marca fictícia; preços, endereço e contatos são ilustrativos.</div>
+<header style="position: sticky; top: 0; z-index: 50; padding-top: env(safe-area-inset-top, 0px); background: rgba(8,8,7,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid #1E1C17">
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#topo" aria-label="Kaminari Sushi — início" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #F5F1E8"><svg aria-hidden="true" width="46" height="46" viewBox="0 0 64 64"><circle cx="32" cy="32" r="31" fill="#E2B53A"/><path d="M36 8 18 36h12l-4 20 20-30H34z" fill="#080807"/></svg><span style="display: flex; flex-direction: column; line-height: 1"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 26px; letter-spacing: 0.06em; text-transform: uppercase">Kaminari</span><span style="font-size: 10px; font-weight: 700; letter-spacing: 0.42em; text-transform: uppercase; color: #E2B53A; margin-top: 4px">Sushi · <span style="font-family: 'Noto Serif JP', serif">雷</span></span></span></a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase">
+<a href="#rodizio" style="color: #D8D2C6; text-decoration: none">Rodízio</a>
+<a href="#cardapio" style="color: #D8D2C6; text-decoration: none">Cardápio</a>
+<a href="#ambiente" style="color: #D8D2C6; text-decoration: none">Ambiente</a>
+<a href="#delivery" style="color: #D8D2C6; text-decoration: none">Delivery</a>
+<a href="#visite" style="color: #D8D2C6; text-decoration: none">Visite</a>
+<a href="#visite" style="border: 1.5px solid #E2B53A; color: #E2B53A; text-decoration: none; padding: 11px 22px; border-radius: 4px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Reservar</a>
+</nav>
+</div>
+</header>
+
+<section id="topo" style="position: relative">
+<span aria-hidden="true" style="position: absolute; right: -40px; top: -20px; font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 420px; line-height: 1; color: #E2B53A; opacity: 0.05; writing-mode: vertical-rl; pointer-events: none">寿司</span>
+<div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 40px 24px 96px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+<div class="k2-vert" aria-hidden="true" style="writing-mode: vertical-rl; font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 18px; letter-spacing: 0.5em; color: #E2B53A; border-left: 1px solid #3A3528; padding-left: 14px; align-self: stretch; display: flex; align-items: center">いらっしゃいませ</div>
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-family: 'Kaushan Script', cursive; color: #E2B53A; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.2">Rápido como um raio, feito com calma.</p>
+<h1 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: clamp(64px, 10vw, 148px); line-height: 0.98; text-transform: uppercase">Rodízio<br><span style="color: transparent; -webkit-text-stroke: 2px #E2B53A">japonês</span></h1>
+<p style="margin: 0; max-width: 460px; color: #CFC8BC; font-size: 18px">Do balcão de sushi à chapa quente, em um salão feito para conversas longas.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
+<a href="#visite" style="background: #E2B53A; color: #080807; text-decoration: none; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; font-size: 14px; padding: 18px 30px; border-radius: 4px">Reservar mesa</a>
+<a href="#delivery" style="border: 1.5px solid #4A4436; color: #F5F1E8; text-decoration: none; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 14px; padding: 18px 30px; border-radius: 4px">Pedir delivery</a>
+</div>
+</div>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; justify-content: center; position: relative">
+<div style="position: relative; width: 100%; max-width: 480px; aspect-ratio: 1 / 1">
+<div aria-hidden="true" style="position: absolute; inset: 0; border-radius: 50%; background: #E2B53A; transform: translate(18px, -18px)"></div>
+<img fetchpriority="high" src="assets/img/hero.jpg" alt="Bentô com niguiris de atum, tempurá e uramaki" style="position: relative; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; border: 6px solid #080807; box-sizing: border-box">
+<div style="position: absolute; left: -14px; bottom: 26px; background: #080807; border: 1px solid #3A3528; border-radius: 6px; padding: 14px 18px; display: flex; flex-direction: column; line-height: 1.1">
+<span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #B5AEA2">A partir de</span>
+<span style="font-family: 'Anton', Impact, sans-serif; font-size: 38px; color: #E2B53A">R$ 89,90</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div aria-hidden="true" style="background: #E2B53A; color: #080807; padding: 16px 0; transform: rotate(-1.2deg); margin: 0 -20px; overflow: hidden">
+<div class="k2-track" style="font-family: 'Anton', Impact, sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap">
+<span style="padding-right: 40px">Sashimi <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">刺身</span> ✦ Niguiri <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">握り</span> ✦ Temaki <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">手巻き</span> ✦ Hot roll ✦ Empanados <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">揚げ物</span> ✦ Chapa <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">鉄板</span> ✦ Drinks ✦ </span>
+<span style="padding-right: 40px">Sashimi <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">刺身</span> ✦ Niguiri <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">握り</span> ✦ Temaki <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">手巻き</span> ✦ Hot roll ✦ Empanados <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">揚げ物</span> ✦ Chapa <span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px">鉄板</span> ✦ Drinks ✦ </span>
+</div>
+</div>
+
+<section id="rodizio">
+<div style="max-width: 1240px; margin: 0 auto; padding: 120px 24px 100px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<div style="flex: 1.2 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 18px">
+<span style="font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 64px; line-height: 1; color: #E2B53A">一</span>
+<div style="display: flex; flex-direction: column"><span style="font-family: 'Noto Serif JP', serif; font-size: 14px; letter-spacing: 0.3em; color: #B5AEA2">料金 · ryōkin</span><h2 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; text-transform: uppercase">Valores do rodízio</h2></div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="display: flex; align-items: baseline; gap: 16px; padding: 22px 0; border-bottom: 1px solid #2C2920"><span style="display: flex; flex-direction: column; line-height: 1.3"><strong style="text-transform: uppercase; letter-spacing: 0.08em">Almoço</strong><span style="color: #B5AEA2; font-size: 15px">Segunda a sexta</span></span><span aria-hidden="true" style="flex: 1; border-bottom: 1px dashed #3A3528; transform: translateY(-6px)"></span><span style="font-family: 'Anton', Impact, sans-serif; font-size: clamp(32px, 3.4vw, 44px); color: #E2B53A">R$ 89,90</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px; padding: 22px 0; border-bottom: 1px solid #2C2920"><span style="display: flex; flex-direction: column; line-height: 1.3"><strong style="text-transform: uppercase; letter-spacing: 0.08em">Jantar</strong><span style="color: #B5AEA2; font-size: 15px">Segunda a quinta</span></span><span aria-hidden="true" style="flex: 1; border-bottom: 1px dashed #3A3528; transform: translateY(-6px)"></span><span style="font-family: 'Anton', Impact, sans-serif; font-size: clamp(32px, 3.4vw, 44px); color: #E2B53A">R$ 109,90</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px; padding: 22px 0; border-bottom: 1px solid #2C2920"><span style="display: flex; flex-direction: column; line-height: 1.3"><strong style="text-transform: uppercase; letter-spacing: 0.08em">Jantar</strong><span style="color: #B5AEA2; font-size: 15px">Sexta</span></span><span aria-hidden="true" style="flex: 1; border-bottom: 1px dashed #3A3528; transform: translateY(-6px)"></span><span style="font-family: 'Anton', Impact, sans-serif; font-size: clamp(32px, 3.4vw, 44px); color: #E2B53A">R$ 119,90</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px; padding: 22px 0; border-bottom: 1px solid #2C2920"><span style="display: flex; flex-direction: column; line-height: 1.3"><strong style="text-transform: uppercase; letter-spacing: 0.08em">Almoço e jantar</strong><span style="color: #B5AEA2; font-size: 15px">Sábado, domingo e feriados</span></span><span aria-hidden="true" style="flex: 1; border-bottom: 1px dashed #3A3528; transform: translateY(-6px)"></span><span style="font-family: 'Anton', Impact, sans-serif; font-size: clamp(32px, 3.4vw, 44px); color: #E2B53A">R$ 119,90</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<div style="background: #12110F; border-radius: 6px; padding: 16px 18px; display: flex; flex-direction: column; line-height: 1.3"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 26px; color: #E2B53A">Grátis</span><span style="color: #CFC8BC; font-size: 14px">até 5 anos</span></div>
+<div style="background: #12110F; border-radius: 6px; padding: 16px 18px; display: flex; flex-direction: column; line-height: 1.3"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 26px; color: #E2B53A">Meio rodízio</span><span style="color: #CFC8BC; font-size: 14px">6 a 10 anos</span></div>
+<div style="background: #12110F; border-radius: 6px; padding: 16px 18px; display: flex; flex-direction: column; line-height: 1.3"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 26px; color: #E2B53A">Integral</span><span style="color: #CFC8BC; font-size: 14px">a partir de 11 anos</span></div>
+</div>
+<p style="margin: 0; color: #8F887D; font-size: 13px">*Valores ilustrativos.</p>
+</div>
+<div style="flex: 0.8 1 340px; min-width: 0; position: relative">
+<img loading="lazy" decoding="async" src="assets/img/combinado.jpg" alt="Travessa de uramakis de salmão e hossomakis" style="width: 100%; height: 560px; object-fit: cover; border-radius: 200px 200px 6px 6px; display: block">
+<span aria-hidden="true" style="position: absolute; top: 28px; right: -10px; writing-mode: vertical-rl; background: #080807; color: #E2B53A; font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 20px; letter-spacing: 0.3em; padding: 18px 10px; border: 1px solid #3A3528">食べ放題</span>
+</div>
+</div>
+</section>
+
+<section id="cardapio" class="k2-wave" style="border-top: 1px solid #1E1C17; border-bottom: 1px solid #1E1C17">
+<div style="max-width: 1240px; margin: 0 auto; padding: 100px 24px; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px">
+<div style="display: flex; align-items: baseline; gap: 18px">
+<span style="font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 64px; line-height: 1; color: #E2B53A">二</span>
+<div style="display: flex; flex-direction: column"><span style="font-family: 'Noto Serif JP', serif; font-size: 14px; letter-spacing: 0.3em; color: #B5AEA2">お品書き · oshinagaki</span><h2 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; text-transform: uppercase">O que chega à mesa</h2></div>
+</div>
+</div>
+<div class="k2-bento">
+<figure class="k2-tile" style="margin: 0; position: relative; overflow: hidden; border-radius: 6px; grid-column: 1 / span 2; grid-row: 1 / span 2"><img loading="lazy" decoding="async" src="assets/img/makis.jpg" alt="Makis com gengibre e wasabi" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; inset: auto 0 0 0; padding: 60px 24px 22px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); display: flex; align-items: flex-end; justify-content: space-between; gap: 12px"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 38px; text-transform: uppercase; line-height: 1">Makis</span><span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 26px; color: #E2B53A">巻き寿司</span></figcaption></figure>
+<figure class="k2-tile" style="margin: 0; position: relative; overflow: hidden; border-radius: 6px; grid-column: 3; grid-row: 1"><img loading="lazy" decoding="async" src="assets/img/uramaki.jpg" alt="Uramakis com molho tarê e gergelim" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; inset: auto 0 0 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); display: flex; align-items: flex-end; justify-content: space-between; gap: 12px"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 24px; text-transform: uppercase; line-height: 1">Uramaki</span><span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 18px; color: #E2B53A">裏巻き</span></figcaption></figure>
+<figure class="k2-tile" style="margin: 0; position: relative; overflow: hidden; border-radius: 6px; grid-column: 4; grid-row: 1"><img loading="lazy" decoding="async" src="assets/img/tempura.jpg" alt="Camarões empanados em tempurá" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; inset: auto 0 0 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); display: flex; align-items: flex-end; justify-content: space-between; gap: 12px"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 24px; text-transform: uppercase; line-height: 1">Tempurá</span><span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 18px; color: #E2B53A">天ぷら</span></figcaption></figure>
+<figure class="k2-tile" style="margin: 0; position: relative; overflow: hidden; border-radius: 6px; grid-column: 3; grid-row: 2"><img loading="lazy" decoding="async" src="assets/img/donburi.jpg" alt="Tigela de arroz com carne grelhada" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; inset: auto 0 0 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); display: flex; align-items: flex-end; justify-content: space-between; gap: 12px"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 24px; text-transform: uppercase; line-height: 1">Donburi</span><span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 18px; color: #E2B53A">丼</span></figcaption></figure>
+<figure class="k2-tile" style="margin: 0; position: relative; overflow: hidden; border-radius: 6px; grid-column: 4; grid-row: 2"><img loading="lazy" decoding="async" src="assets/img/entradas.jpg" alt="Yakissoba, sunomono de alga, edamame e gohan" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; inset: auto 0 0 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); display: flex; align-items: flex-end; justify-content: space-between; gap: 12px"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 24px; text-transform: uppercase; line-height: 1">Entradas</span><span style="font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 18px; color: #E2B53A">前菜</span></figcaption></figure>
+</div>
+</div>
+</section>
+
+<section id="ambiente">
+<div style="max-width: 1240px; margin: 0 auto; padding: 110px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 520px; min-width: 0">
+<img loading="lazy" decoding="async" src="assets/img/brinde.jpg" alt="Duas pessoas brindando com sushis" style="width: 100%; height: 520px; object-fit: cover; object-position: center 35%; border-radius: 6px; display: block">
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: baseline; gap: 18px">
+<span style="font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 64px; line-height: 1; color: #E2B53A">三</span>
+<div style="display: flex; flex-direction: column"><span style="font-family: 'Noto Serif JP', serif; font-size: 14px; letter-spacing: 0.3em; color: #B5AEA2">空間 · kūkan</span><h2 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; text-transform: uppercase">O ambiente</h2></div>
+</div>
+<blockquote style="margin: 0; padding-left: 22px; border-left: 3px solid #E2B53A; font-family: 'Kaushan Script', cursive; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.3; color: #F5F1E8">A melhor mesa é aquela em que ninguém olha o relógio.</blockquote>
+<p style="margin: 0; color: #CFC8BC">Mesas amplas, sofás confortáveis e um balcão de onde dá para ver cada peça sendo montada. Aos domingos a casa enche de famílias, então vale reservar.</p>
+<a href="#visite" style="align-self: flex-start; background: #E2B53A; color: #080807; text-decoration: none; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; font-size: 14px; padding: 18px 30px; border-radius: 4px">Reservar mesa</a>
+</div>
+</div>
+</section>
+
+<section id="delivery" style="background: #E2B53A; color: #080807; position: relative; overflow: hidden">
+<span aria-hidden="true" style="position: absolute; left: -30px; bottom: -80px; font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 360px; line-height: 1; color: #080807; opacity: 0.07; pointer-events: none">出前</span>
+<div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 100px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: baseline; gap: 18px">
+<span style="font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 64px; line-height: 1">四</span>
+<span style="font-family: 'Noto Serif JP', serif; font-size: 14px; letter-spacing: 0.3em; font-weight: 700">出前 · demae</span>
+</div>
+<h2 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: clamp(48px, 6vw, 84px); line-height: 0.95; text-transform: uppercase">Chama no <span style="font-family: 'Kaushan Script', cursive; text-transform: none">delivery</span></h2>
+<p style="margin: 0; font-size: 18px; max-width: 460px; font-weight: 500">Seu sushi favorito sem sair de casa. Embalagem que mantém cada peça no lugar e entrega rápida na região.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px">
+<a href="#delivery" style="border: 1.5px solid #080807; color: #080807; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 22px; border-radius: 4px">Pedir pelo app</a>
+<a href="#delivery" style="border: 1.5px solid #080807; color: #080807; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 22px; border-radius: 4px">Pedir pelo WhatsApp</a>
+</div>
+</div>
+<a href="#delivery" style="flex: 0 1 420px; min-width: 0; background: #080807; color: #F5F1E8; text-decoration: none; border-radius: 6px; padding: 40px; display: flex; flex-direction: column; gap: 10px; box-shadow: 14px 14px 0 rgba(8,8,7,0.25)">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #B5AEA2">Menu digital Kaminari</span>
+<span style="font-family: 'Anton', Impact, sans-serif; font-size: clamp(96px, 11vw, 150px); line-height: 0.9; color: #E2B53A">10%</span>
+<span style="font-family: 'Anton', Impact, sans-serif; font-size: 34px; text-transform: uppercase; line-height: 1">OFF pedindo direto</span>
+<span style="margin-top: 14px; align-self: flex-start; background: #E2B53A; color: #080807; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; font-size: 14px; padding: 16px 26px; border-radius: 4px">Fazer pedido →</span>
+<span style="color: #8F887D; font-size: 12px; margin-top: 6px">Consulte as condições da oferta.</span>
+</a>
+</div>
+</section>
+
+<section id="beneficios">
+<div style="max-width: 1240px; margin: 0 auto; padding: 110px 24px; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; align-items: baseline; gap: 18px">
+<span style="font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 64px; line-height: 1; color: #E2B53A">五</span>
+<div style="display: flex; flex-direction: column"><span style="font-family: 'Noto Serif JP', serif; font-size: 14px; letter-spacing: 0.3em; color: #B5AEA2">特典 · tokuten</span><h2 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; text-transform: uppercase">Benefícios da casa</h2></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); border-top: 1px solid #2C2920">
+<div style="padding: 36px 32px 36px 0; display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid #2C2920"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 56px; line-height: 1; color: #E2B53A">01</span><h3 style="margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em">Aniversariante</h3><p style="margin: 0; color: #CFC8BC">No dia do seu aniversário, a sobremesa é por conta da casa.</p></div>
+<div style="padding: 36px 32px 36px 0; display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid #2C2920"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 56px; line-height: 1; color: #E2B53A">12+</span><h3 style="margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em">Grupos</h3><p style="margin: 0; color: #CFC8BC">Mesas a partir de 12 pessoas têm reserva garantida e um rodízio cortesia.</p></div>
+<div style="padding: 36px 32px 36px 0; display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid #2C2920"><span style="font-family: 'Anton', Impact, sans-serif; font-size: 56px; line-height: 1; color: #E2B53A">2x</span><h3 style="margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em">Happy hour</h3><p style="margin: 0; color: #CFC8BC">Drinks em dobro de terça a quinta, das 18h às 20h.</p></div>
+</div>
+<p style="margin: 0; color: #8F887D; font-size: 13px">*Benefícios ilustrativos.</p>
+</div>
+</section>
+
+<section id="visite" class="k2-wave" style="border-top: 1px solid #1E1C17">
+<div style="max-width: 1240px; margin: 0 auto; padding: 110px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; align-items: baseline; gap: 18px">
+<span style="font-family: 'Noto Serif JP', serif; font-weight: 900; font-size: 64px; line-height: 1; color: #E2B53A">六</span>
+<div style="display: flex; flex-direction: column"><span style="font-family: 'Noto Serif JP', serif; font-size: 14px; letter-spacing: 0.3em; color: #B5AEA2">営業案内 · eigyō annai</span><h2 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; text-transform: uppercase">Visite o Kaminari</h2></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div style="background: #080807; border: 1px solid #2C2920; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: 26px; text-transform: uppercase; color: #E2B53A">Horários</h3>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><dt style="color: #B5AEA2">Ter a qui</dt><dd style="margin: 0; font-weight: 600">12h–15h · 18h–23h</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><dt style="color: #B5AEA2">Sex e sáb</dt><dd style="margin: 0; font-weight: 600">12h–0h</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><dt style="color: #B5AEA2">Domingo</dt><dd style="margin: 0; font-weight: 600">12h–22h</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><dt style="color: #B5AEA2">Segunda</dt><dd style="margin: 0; font-weight: 600">Fechado</dd></div>
+</dl>
+</div>
+<div style="background: #080807; border: 1px solid #2C2920; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: 26px; text-transform: uppercase; color: #E2B53A">Endereço &amp; reservas</h3>
+<p style="margin: 0">Rua Exemplo, 000<br><span style="color: #B5AEA2">São Paulo — SP</span></p>
+<p style="margin: 0">WhatsApp <span style="font-weight: 700; color: #E2B53A">(11) 0000-0000</span></p>
+</div>
+<div style="background: #080807; border: 1px solid #2C2920; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: 26px; text-transform: uppercase; color: #E2B53A">Pagamento</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="border: 1px solid #3A3528; border-radius: 999px; padding: 8px 14px; font-size: 14px">Crédito</span>
+<span style="border: 1px solid #3A3528; border-radius: 999px; padding: 8px 14px; font-size: 14px">Débito</span>
+<span style="border: 1px solid #3A3528; border-radius: 999px; padding: 8px 14px; font-size: 14px">Pix</span>
+<span style="border: 1px solid #3A3528; border-radius: 999px; padding: 8px 14px; font-size: 14px">Dinheiro</span>
+<span style="border: 1px solid #3A3528; border-radius: 999px; padding: 8px 14px; font-size: 14px">Vale-refeição</span>
+</div>
+<p style="margin: 0; color: #B5AEA2; font-size: 14px">Aceitamos os principais vales-refeição.</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #1E1C17; overflow: hidden">
+<div style="max-width: 1240px; margin: 0 auto; padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 24px">
+<span aria-hidden="true" style="font-family: 'Anton', Impact, sans-serif; font-size: clamp(80px, 17vw, 240px); line-height: 0.85; text-transform: uppercase; color: transparent; -webkit-text-stroke: 1.5px #3A3528; white-space: nowrap">Kaminari Sushi</span>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; color: #8F887D; font-size: 14px">
+<span style="font-family: 'Kaushan Script', cursive; color: #E2B53A; font-size: 22px">Até a próxima.</span>
+<span>Kaminari Sushi é uma marca fictícia · Fotos: <a href="https://www.freepik.com">Freepik</a> · ごちそうさまでした</span>
+</div>
+<p style="margin: 0; font-size: 13px; color: #8F887D">Projeto conceitual desenvolvido por <a href="https://github.com/johnatantech">Johnatan Flores</a></p>
+</div>
+</footer>
+
+</div>
+</body>
+</html>

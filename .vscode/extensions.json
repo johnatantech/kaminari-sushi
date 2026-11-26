@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ritwickdey.LiveServer",
+    "ms-azuretools.vscode-azurestaticwebapps",
+    "esbenp.prettier-vscode",
+    "github.vscode-pull-request-github"
+  ]
+}
