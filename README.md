@@ -2,9 +2,7 @@
 
 Site de uma página para um rodízio japonês **fictício**, criado como projeto de portfólio.
 
-**Preview:**[ _adicione aqui a URL publicada_](https://johnatantech.github.io/kaminari-sushi/)
-
-![Preview do site](assets/img/hero.jpg)
+**Preview:** https://johnatantech.github.io/kaminari-sushi/
 
 ## Destaques
 
